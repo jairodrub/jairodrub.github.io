@@ -1,0 +1,471 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    padding-top: 110px; 
+    font-family: 'Nunito', sans-serif;
+    color: #3f3f3f;
+}
+
+header {
+    position: absolute;
+    top: 0;
+    height: 100px;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 20px;
+    box-shadow: 0px 4px 4px grey;
+    z-index: 2;
+    font-family: 'Montserrat', sans-serif;
+    color: #3f3f3f;
+    font-size: 20px;
+}
+
+header.blanco {
+    box-shadow: initial;
+}
+
+
+.logo img {
+    height: 60px;
+}
+
+.logo img:hover {
+    height: 80px;
+}
+
+.blanco .logo {
+    color: white;
+}
+
+.blanco .logo:hover {
+    color: rgb(15, 114, 185);
+}
+
+.sombraheader {
+    width: 100%;
+    height: 40px;
+    position: sticky;
+    top: 80px;
+    background: -webkit-linear-gradient(top, white 10%, transparent);
+    z-index: 1;
+}
+
+.burger {
+    color: white;
+    font-size: 34px;
+    display: none;
+}
+
+.blanco .burger {
+    color: white;
+}
+
+.blanco .burger:hover {
+    color: rgb(15, 114, 185);
+}
+
+.headeralquiler {
+    height: 95px;
+    background: linear-gradient(to right, rgb(245, 206, 195), rgb(241, 141, 113), #DF4215, rgb(100, 23, 1));
+    background-position: top center;
+    background-size: cover; 
+    background-attachment: fixed;
+    position: fixed;
+    z-index: 2;
+}
+
+.headeralquiler ul {
+    background-color: #13131354;
+    border-radius: 10px;
+    height: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.headeralquiler a {
+    font-size: 20px;
+    color: white;
+}
+
+header nav ul {
+    list-style: none;
+    display: flex;
+}
+
+header nav ul li {
+    padding: 0 15px;
+}
+
+.blanco nav ul li a {
+    color: white;
+}
+
+.blanco nav ul li a:hover {
+    color: rgb(15, 114, 185);
+}
+
+.blanco nav ul li a.activo {
+    color: rgb(15, 114, 185);
+}
+
+a {
+    text-decoration: none;
+    color: #282828;
+}
+
+a:hover {
+    color: rgb(15, 114, 185); /* color/es corporativos */
+}
+
+a.activo {
+    color: rgb(15, 114, 185);
+}
+
+.bread {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 18px;
+}
+
+.bread .activo {
+    color: #EA5C1C;
+}
+
+.simbolo {
+    font-weight: bold;
+    color: #3f3f3f;
+}
+
+.separador {
+    display: none;
+    border: solid 1px #EA5C1C;
+    width: 60%;
+}
+
+.contenedor {
+    padding-top: 20px; 
+    font-family: 'Nunito', sans-serif;
+    margin: 40px;
+    /* Rejillas, receta grid para filas y columnas con cards */
+    display: grid; 
+    grid-template-columns: repeat(auto-fit, 300px);
+    grid-template-rows: repeat (3,400px);
+    grid-gap: 20px;
+    justify-content: space-between;
+}
+
+.tarjeta {
+    width: 300px;
+    height: 400px;
+    box-shadow: 4px 4px 9px grey;
+}
+
+.imagen {
+    width: 300px;
+    height: 200px;
+    overflow: hidden; /* Para que no se desborde */
+    text-align: center;
+}
+
+.imagen img {
+    height: 230px; /* porque las imágenes no cogen la altura del div */
+    
+}
+
+
+
+.datos {
+    height: 200px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    color: #3f3f3f;
+}
+
+.top {
+    display: flex;
+    justify-content: space-between;
+}
+
+.direccion {
+    width: 200px;
+}
+
+.direccion p:first-child {
+    color: crimson;
+    font-weight: bold;
+}
+
+.precioboton {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.precio {
+    width: 100%;
+    font-size: 15px;
+    text-align: center;
+    display: flex;
+    flex-basis: 60px;
+    flex-grow: 1;
+}
+
+.btn {
+    text-decoration: none;
+    background-color: #EA5C1C;
+    color: white;
+    padding: 8px;
+    font-size: 18px; 
+    border-radius: 5px;
+    border-bottom: 4px solid rgb(160, 57, 9);
+    align-self: right; /* Para colocar el botón en el centro o donde quiera */
+    display: flex;
+}
+
+.btn:hover {
+    background-color: rgb(160, 57, 9);
+}
+
+.btn p {
+    color: white;
+}
+
+.info_casa {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.area {
+    width: 25px;
+}
+
+.cama {
+    width: 25px;
+}
+
+.precioinfo {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/* Paginación */
+
+.flotante_izda {
+    float: left;
+    margin: 20px;   
+}
+
+.flotante_dcha {
+    float: right;
+    margin: 20px;   
+}
+
+.clear {
+    clear: right; /* Elimina el comportamiento float */
+}
+
+.btn2 {
+    background-color: rgb(50, 50, 219);
+    color: white;
+    padding: 10px;
+    font-size: 20px;
+    border-radius: 5px;
+    text-decoration: none;
+}
+
+.izdo1 {
+    float: left
+}
+
+.dcho1 {
+    float: right;
+}
+
+.paginacion {
+    margin: 30px;
+    padding: 60px;
+    max-width: 100%;
+    text-align: center;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+.paginacion .activo {
+    color: red;
+    border: solid 1px red;
+}
+
+.numero {
+    color: rgb(50, 50, 219);
+    border: solid 1px rgb(50, 50, 219);
+    border-radius: 5px;
+    font-size: 20px;
+    padding: 10px;
+    text-decoration: none;
+}
+
+footer {
+    background:
+        linear-gradient(27deg, #151515 5px, transparent 5px) 0 5px,
+        linear-gradient(207deg, #151515 5px, transparent 5px) 10px 0px,
+        linear-gradient(27deg, #222 5px, transparent 5px) 0px 10px,
+        linear-gradient(207deg, #222 5px, transparent 5px) 10px 5px,
+        linear-gradient(90deg, #1b1b1b 10px, transparent 10px),
+        linear-gradient(#1d1d1d 25%, #1a1a1a 25%, #1a1a1a 50%, transparent 50%, transparent 75%, #242424 75%, #242424);
+    background-color: #131313;
+    background-size: 20px 20px;
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    position: relative;
+}
+
+.top1 {
+    height: 50px;
+    width: 50px;
+    border-radius: 30px;
+    background:
+        linear-gradient(27deg, #151515 5px, transparent 5px) 0 5px,
+        linear-gradient(207deg, #151515 5px, transparent 5px) 10px 0px,
+        linear-gradient(27deg, #222 5px, transparent 5px) 0px 10px,
+        linear-gradient(207deg, #222 5px, transparent 5px) 10px 5px,
+        linear-gradient(90deg, #1b1b1b 10px, transparent 10px),
+        linear-gradient(#1d1d1d 25%, #1a1a1a 25%, #1a1a1a 50%, transparent 50%, transparent 75%, #242424 75%, #242424);
+    background-color: #131313;
+    background-size: 20px 20px;
+    position: absolute;
+    top: -30px;
+    left: 50%;
+    transform: translateX(-50%);  /* La mitad del ancho del elemento */
+    font-size: 36px;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+footer p {
+    font-size: 18px;
+    padding: 5px;
+}
+
+.izdo {
+    /* border: solid 1px white; */
+    flex-basis: 300px;
+    flex-grow: 1;
+    padding: 20px;
+}
+
+.centro {
+    /* border: solid 1px white; */
+    flex-basis: 300px;
+    flex-grow: 1;
+    padding: 15px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+footer a {
+    color: white;
+    font-size: 18px;
+    padding: 5px;
+}
+
+footer a:hover {
+    color: #EA5C1C;
+}
+
+footer a.activo {
+    color: #EA5C1C;
+}
+
+.dcho {
+    padding: 15px;
+    flex-basis: 300px;
+    flex-grow: 1;   
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.rrss a {
+    font-size: 32px;
+    color: white;
+    padding: 5px;
+}
+
+.rrss a:hover {
+    color: #EA5C1C;
+}
+
+.copy {
+    padding: 5px;
+    /* border: solid 1px white; */
+    width: 100%;    
+}
+
+.copy p {
+    font-size: 14px;
+    text-align: center;
+}
+
+/* Media Queries */
+
+@media (max-width: 720px) {
+    .contenedor {
+        justify-content: center;
+    }
+}
+
+@media (max-width: 640px) {
+    .logo img {
+        display: none;
+    }
+
+    .burger {
+        display: initial;
+    }
+
+    nav {
+        display: none;
+    }
+
+    .izdo, .centro, .dcho {
+        flex-basis: 200px;
+    }
+}
+
+@media (max-width: 420px) {
+
+    .headeralquiler {
+        height: 40px;
+        background-color: #EA5C1C;
+        background-image: none;
+    }   
+
+    .sombraheader {
+        height: 50px;
+        background: -webkit-linear-gradient(top, 40px, transparent); /* Quitar la línea gradiente */
+        top: 0;
+    }
+}

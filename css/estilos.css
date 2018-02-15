@@ -1,0 +1,609 @@
+/* Estilos generales */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Montserrat', sans-serif;
+    color: #3f3f3f;
+    font-size: 20px;
+}
+
+p {
+    line-height: 1.5em;
+    padding: 20px;
+}
+
+header {
+    position: absolute;
+    top: 0;
+    height: 100px;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 20px;
+    box-shadow: 0px 4px 4px grey;
+    z-index: 2;
+}
+
+header.blanco {
+    box-shadow: initial;
+}
+
+.headerinicio {
+    height: 95px;
+    background-image: url('../img/playa.jpg');
+    background-color: rgb(37, 131, 199);
+    background-position: top center;
+    background-size: cover; 
+    background-attachment: fixed;
+    position: fixed;
+    z-index: 2;
+}
+
+.headerinicio ul {
+    background-color: #13131354;
+    border-radius: 10px;
+    height: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.headercontacto {
+    height: 95px;
+    background: linear-gradient(to right, white, rgb(175, 174, 174), rgb(53, 53, 53), black);
+    background-position: top center;
+    background-size: cover; 
+    background-attachment: fixed;
+    position: fixed;
+    z-index: 2;
+}
+
+.headercontacto a {
+    font-size: 20px;
+    color: white;
+}
+
+.logo img {
+    height: 60px;
+}
+
+.logo img:hover {
+    height: 80px;
+}
+
+.burger {
+    color: white;
+    font-size: 34px;
+    display: none;
+}
+
+.blanco .burger {
+    color: white;
+}
+
+.blanco .burger:hover {
+    color: #EA5C1C;
+}
+
+.logo {
+    font-size: 50px;
+    
+}
+
+.blanco .logo {
+    color: white;
+}
+
+.blanco .logo:hover {
+    color: #EA5C1C;
+}
+
+.sombraheader {
+    width: 100%;
+    height: 40px;
+    position: sticky;
+    top: 80px;
+    background: -webkit-linear-gradient(top, white 10%, transparent);
+    z-index: 1;
+}
+
+a {
+    text-decoration: none;
+    color: #282828;
+}
+
+a:hover {
+    color: #EA5C1C; /* color/es corporativos */
+}
+
+a.activo {
+    color: #EA5C1C;
+}
+
+img {
+    max-width: 100%;
+}
+
+.boton {
+    margin: 20px;
+    color: white;
+    font-size: 22px;
+    padding: 10px;
+    border-radius: 5px;
+    background-color: rgb(43, 40, 40);
+}
+
+.boton:hover {
+    background-color:  rgb(19, 17, 17);
+    color: white;
+}
+
+.naranja {
+    margin: 10px;
+    background-color: #DF4215;
+}
+.azul {
+    margin: 20px;
+    background-color: #0D71B9;
+}
+
+.naranja:hover {
+    background-color: rgb(177, 50, 15);
+    color: white;
+    }
+
+.azul:hover {
+    background-color: rgb(10, 90, 148);
+    color: white;
+    }
+
+
+@keyframes intermitente {
+    0% {opacity: 0}
+    50% {opacity: 1}
+    100% {opacity: 0}
+}
+
+.fila {
+    margin: 40px;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.fila h2 {
+    margin-left: 20px;
+}
+
+.primera {
+    margin-top: 100px;
+}
+
+.fondo {
+    margin: 0;
+    padding: 60px 40px;
+    background-image: url('../img/doncellabeach.jpg');
+    background-position: center;
+    background-size: cover;
+    /* background-attachment: fixed; */
+}
+
+.imagen1 {
+    box-shadow: 2px 2px 6px black;
+    border-radius: 8px;
+}
+
+.col1 {
+    padding: 10px;
+    flex-basis: 300px;
+    flex-grow: 1;
+}
+
+.col2 {
+    padding: 10px;
+    flex-basis: 300px;
+    flex-grow: 2;
+}
+
+.col3 {
+    padding: 10px;
+    flex-basis: 300px;
+    flex-grow: 3;
+}
+
+.centrado {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.columna {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.pie {
+    display: flex;
+    align-items: flex-end;
+}
+
+.eslogan {
+    font-size: 50px;
+    padding: 20px;
+    background-color: rgba(255, 255, 255, 0.657);
+}
+
+.separador {
+    display:none;
+    border: solid 1px #EA5C1C;
+    width: 60%;
+}
+
+header nav ul {
+    list-style: none;
+    display: flex;
+}
+
+header nav ul li {
+    padding: 0 15px;
+}
+
+.blanco nav ul li a {
+    color: white;
+}
+
+.blanco nav ul li a:hover {
+    color: #EA5C1C;
+}
+
+.blanco nav ul li a.activo {
+    color: #EA5C1C;
+}
+
+.hero {
+    height: 100vh;
+    background-image: url('../img/playa.jpg');
+    background-size: cover;
+    background-position: top center;
+    /* background-attachment: fixed; */ /* Parallax */
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: center;
+    line-height: 3em;
+}
+
+.hero h1 {
+    color: rgb(255, 255, 255);
+    font-size: 50px;
+    text-shadow: 2px 2px 10px black;
+    background-color: rgba(37, 10, 10, 0.493);
+    border-radius: 10px;
+    padding: 10px;
+    text-align: center;
+}
+
+.hero h2 {
+    margin-top: 10px;
+    padding: 10px;
+    color: white;
+    margin-bottom: 60px;
+    text-shadow: 2px 2px 10px black;
+    background-color: rgba(37, 10, 10, 0.493);
+    border-radius: 10px;
+}
+
+.hero a {
+    color: white;
+    font-size: 40px;
+    margin-bottom: 60px;
+    animation-name: intermitente;
+    animation-duration: 1500ms;
+    animation-iteration-count: infinite;
+}
+
+.explicacion {
+    padding: 40px 20px 40px 20px;
+}
+
+.explicacion h3 {
+    font-size: 18px;
+    padding-top: 20px;
+    padding-bottom: 0px;
+}
+
+.explicacion p {
+    font-size: 16px;
+    padding: 10px;
+    line-height: 1.5em;
+}
+
+/* Formulario Newsletter */
+
+.miniform {
+    width: 100%;
+    padding: 0px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+}
+
+.miniform p {
+    color: #EA5C1C;
+    font-size: 28px;
+}
+
+.miniform input {
+    border: 2px solid #EA5C1C;
+    color: #EA5C1C;
+    font-size: 24px;
+    padding: 10px;
+}
+
+.miniform .boton {
+    border: 2px solid #EA5C1C;
+    background-color: #EA5C1C;
+    color: white;
+    font-size: 24px;
+    padding: 10px;
+}
+
+.input:focus {
+    outline: none;
+}
+
+.miniform .boton:hover {
+    border: 2px solid rgb(172, 67, 23);
+    background-color: rgb(156, 62, 21);
+    color: white;
+    font-size: 24px;
+    padding: 10px;
+}
+
+footer {
+    background:
+        linear-gradient(27deg, #151515 5px, transparent 5px) 0 5px,
+        linear-gradient(207deg, #151515 5px, transparent 5px) 10px 0px,
+        linear-gradient(27deg, #222 5px, transparent 5px) 0px 10px,
+        linear-gradient(207deg, #222 5px, transparent 5px) 10px 5px,
+        linear-gradient(90deg, #1b1b1b 10px, transparent 10px),
+        linear-gradient(#1d1d1d 25%, #1a1a1a 25%, #1a1a1a 50%, transparent 50%, transparent 75%, #242424 75%, #242424);
+    background-color: #131313;
+    background-size: 20px 20px;
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    position: relative;
+}
+
+.top {
+    height: 50px;
+    width: 50px;
+    border-radius: 30px;
+    background:
+        linear-gradient(27deg, #151515 5px, transparent 5px) 0 5px,
+        linear-gradient(207deg, #151515 5px, transparent 5px) 10px 0px,
+        linear-gradient(27deg, #222 5px, transparent 5px) 0px 10px,
+        linear-gradient(207deg, #222 5px, transparent 5px) 10px 5px,
+        linear-gradient(90deg, #1b1b1b 10px, transparent 10px),
+        linear-gradient(#1d1d1d 25%, #1a1a1a 25%, #1a1a1a 50%, transparent 50%, transparent 75%, #242424 75%, #242424);
+    background-color: #131313;
+    background-size: 20px 20px;
+    position: absolute;
+    top: -30px;
+    left: 50%;
+    transform: translateX(-50%);  /* La mitad del ancho del elemento */
+    font-size: 36px;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+footer p {
+    font-size: 18px;
+    padding: 5px;
+}
+
+.izdo {
+    /* border: solid 1px white; */
+    flex-basis: 300px;
+    flex-grow: 1;
+    padding: 20px;
+}
+
+.centro {
+    /* border: solid 1px white; */
+    flex-basis: 300px;
+    flex-grow: 1;
+    padding: 15px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+footer a {
+    color: white;
+    font-size: 18px;
+    padding: 5px;
+}
+
+footer a:hover {
+    color: #EA5C1C;
+}
+
+footer a.activo {
+    color: #EA5C1C;
+}
+
+.dcho {
+    padding: 15px;
+    flex-basis: 300px;
+    flex-grow: 1;   
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.rrss a {
+    font-size: 32px;
+    color: white;
+    padding: 5px;
+}
+
+.rrss a:hover {
+    color: #EA5C1C;
+}
+
+.copy {
+    padding: 5px;
+    /* border: solid 1px white; */
+    width: 100%;    
+}
+
+.copy p {
+    font-size: 14px;
+    text-align: center;
+}
+
+
+
+/* Media Queries */
+
+@media (min-width: 1280px) {
+    .hero, .fondo {
+        background-attachment: fixed;
+    }
+}
+
+@media (max-width: 720px) {
+    .fila {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .columna {
+        margin: 20px;
+    }
+
+    .separador {
+        display: initial;
+    }
+}
+
+@media (max-width: 640px) {
+    body {
+        font-size: 18px;
+    }
+
+    .burger {
+        display: initial;
+    }
+
+    nav {
+        display: none;
+    }
+
+    .logo img {
+        display: none;
+    }
+
+    .hero {
+        background-attachment: scroll; /* No hay Parallax en los móviles, por lo que ponemos scroll */
+    }
+
+    .hero h1 {
+        padding: 0px 10px;
+        font-size: 36px;
+        text-shadow: 2px 2px 6px black;
+        /* border: solid 1px white; */
+        width: 100%;
+        text-align: center;
+    }
+
+    .hero h2 {
+        padding: 0px 10px;
+        font-size: 28px;
+        text-shadow: 2px 2px 6px black;
+        /* border: solid 1px white; */
+        width: 100%;
+        text-align: center;
+    }
+    
+    .fondo {
+        padding: 0 20px 0 20px;
+    }
+
+    .eslogan {
+        font-size: 30px;
+        margin: 0px;
+    }
+
+    .miniform {
+        text-align: center;
+    }
+
+    .izdo, .centro, .dcho {
+        flex-basis: 200px;
+    }
+}
+
+@media (max-width: 420px) {
+    body {
+        font-size: 16px;
+    }
+
+    .headerinicio {
+        height: 40px;
+        background-color: rgb(70, 65, 65);
+        background-image: none;
+    }   
+
+    .sombraheader {
+        height: 50px;
+        background: -webkit-linear-gradient(top, 40px, transparent); /* Quitar la línea gradiente */
+        top: 0;
+    }
+
+    .fila {
+        margin: 20px 0px 20px 0px;
+    }
+
+    .fila.primera {
+        margin: 100px 0px 20px 0px;
+    }
+
+    .miniform input {
+        font-size: 20px;
+    }
+
+    .miniform .boton {
+        font-size: 20px;   
+    }
+
+    .ultima {
+        margin: 20px 0 40px 0;
+    }
+
+    .izdo {
+        text-align: center;
+        margin-top: 20px;
+    }
+
+    .miniform .boton:hover {
+        font-size: 20px;
+        color: white;
+    } 
+}
